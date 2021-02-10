@@ -74,7 +74,7 @@ public class Main {
         System.out.println("Count Pineapple: " + Collections.frequency(fruitList, "Pineapple"));
 
     }
-
+//этот код мне подсказал интернет, и я не до конца в нем разобрался(дальше будут вопросы)
         public static void countFruitRepeats() {
             Map<String, Integer> fruits = new HashMap<>();
 
@@ -100,7 +100,14 @@ public class Main {
                     fruits.put(f, fruits.get(f) + 1);
                 }
             }
-
+// сверху вроде все понятно:
+            //создаем переменную f и кладем в нее метод, который осуществляет доступ к индексу списка
+            //если значение еще не встречалось, то кладем единицу в ключ карты, так? // хотя внизу ключом как раз является фрукт, а число - это значение.
+            //если встречалось, то добавляем еще единицу.
+// а вот снизу синтаксис мне до конца не понятен. Попробую прочитать, а ты мне скажи, прав я или нет.
+            //используем конструкцию foreach, где мы шаримся в карте "Map.Entry<String, Integer> entry" по элементам fruits.entrySet()
+            //и после прохождения мапы выводим ключ карты entry и значение карты entry.
+            //получается, вопрос в том, что entry - это название карты? может ли быть другое название? 
             for (Map.Entry<String, Integer> entry : fruits.entrySet()) {
                 System.out.println("Fruit " + entry.getKey() + " repeats " + entry.getValue() + " times.");
             }
